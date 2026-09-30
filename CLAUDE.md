@@ -4,21 +4,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Personal site for ridingmyzephyr.com. It's plain static HTML and CSS: no build step, package manager, framework, linter, or tests. To preview it, open `index.html` in a browser or serve the folder with any static server (for example, `python -m http.server`).
+Single-page site for Mike Bauknecht's software consulting, served at bauknecht.ing (GitHub Pages, see `CNAME`). It's plain static HTML and CSS: no build step, package manager, framework, linter, or tests. To preview it, open `index.html` in a browser or serve the folder with any static server (for example, `python -m http.server`).
 
 ## Structure
 
-- Four pages: `index.html` (home), `professional.html`, `exploratory.html`, `play.html`. Each one is a complete, standalone document.
-- `style.css` is the only shared stylesheet. It's written in a compact, minified style with one rule per line. Match that style.
-- There are no includes or templates. The `<head>` (Google Fonts link, stylesheet link), header/nav, and footer are copied into every page. A change to any of them has to be made in all four files.
+- One page: `index.html`. It's hand-formatted with 4-space indentation and one block element per line, so the nesting is visible. Keep it that way (short inline elements like `<span>` stay on their parent's line). Sections (`#services`, `#experience`, `#contact`) are linked from the header nav as in-page anchors.
+- `style.css` is the only stylesheet. It's written in a compact, minified style with one rule per line. Match that style.
 
 ## Conventions
 
-- **Per-page accent color.** Each page sets `--accent` in an inline `<style>` in its `<head>`: home and play use `#2F7F86` (sea), professional uses `#C99A1E`, exploratory uses `#8A82C4`. Borders, links, and nav underlines all use `var(--accent)`.
-- **Theme tokens** are on `:root` in `style.css` (`--haze`, `--ink`, `--sea`, `--sail`, `--lilac`, `--muted`). Dark mode redefines them under `prefers-color-scheme: dark`. Use these tokens, not raw colors.
-- **Active nav item:** the current page's link gets `aria-current="page"` (the home page has none).
-- **Fonts:** Bricolage Grotesque for headings and UI, Newsreader for body text.
-- **Content blocks:** `.entry` is a dated row with `<time>` and `<h3>`, used for work history. `.note` is a left-bordered callout.
-- **The `.streaks` SVG** is the animated "wind" motif. Its draw speed comes from the `--speed` custom property, and `play.html` changes it with a range slider. Motion is disabled under `prefers-reduced-motion`.
-- The footer year is filled in by a one-line inline script on every page.
-- Some pages still have template placeholder copy (for example, "Your Name" in the `play.html` footer, the `you@ridingmyzephyr.com` email, and the "Topic or question" notes). Don't treat it as final content.
+- **Theme tokens** are on `:root` in `style.css`: `--bg`, `--surface`, `--ink`, `--muted`, `--line`, `--accent` (steel blue, used for links and buttons), `--accent-ink`, `--gold` (used sparingly for the featured card and price), and `--hero*` for the dark navy hero band. Dark mode redefines them under `prefers-color-scheme: dark`. Use these tokens, not raw colors.
+- **Fonts:** Inter Tight for headings, Inter for body and UI.
+- **Layout:** each page section is a full-width `<section>` with a `.wrap` inside. `.hero` is the dark intro band. `.contact` sits on the surface color.
+- **Components:** `.btn` (with `.btn-ghost` and `.btn-sm` variants), `.card` in a `.grid` for services (`.featured` adds the gold top border), `.skills` for the bulleted skill list, and `.timeline` (an `<ol>` of `<time>` plus `<h3>` rows, with the employer in an `<h3> span`) for work history.
+- On narrow screens (40rem and below), the header nav shows only the "Get in touch" button.
+- The footer year is filled in by a one-line inline script.

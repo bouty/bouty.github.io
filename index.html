@@ -1,24 +1,110 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ridingmyzephyr - Mike Bauknecht</title><meta name="description" content="Personal site of Mike Bauknecht: software consulting work, personal training and coaching exploration.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"><style>:root{--accent:#2F7F86}</style></head>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mike Bauknecht – Software Consulting</title>
+    <meta name="description" content="Software consulting from Mike Bauknecht in Watertown, WI: custom apps, system integrations, legacy migrations, and a half-day Tech Fit Review for small businesses.">
+    <link rel="canonical" href="https://bauknecht.ing/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<header><div class="wrap"><a class="brand" href="index.html">riding my zephyr</a>
-<nav aria-label="Main"><a href="professional.html">Professional</a><a href="exploratory.html">Exploratory</a><a href="play.html">Play</a></nav></div></header>
-<main><div class="wrap">
-<svg class="streaks" viewBox="0 0 400 90" aria-hidden="true"><path d="M5 20 C90 0 150 40 250 18 S360 10 395 25"/><path d="M5 48 C70 32 170 70 260 46 S350 40 380 52"/><path d="M5 76 C110 60 140 88 230 72 S330 66 360 78"/></svg>
-<h1 class="name">Hi, I'm Mike Bauknecht.</h1>
-<p class="lede">A zephyr is a gentle west wind and how I aspire to carry myself. This is where I share my work, my curiosity, my play and provide homage to one of my favorite bands.</p>
-<p>I'm a software engineer in Watertown, WI with over two decades of experience designing and building software and several years leading teams. I currently work with clients in Madison and my local community.</p>
-<p>I enjoy staying physically active with things like running, mountain biking and hiking. I've also instructed a few courses at my local YMCA.</p>
-<h2><a href="professional.html">Professional</a></h2>
-<p>Software Consulting - Half-day Tech Fit Review — $1,500 flat. Tech that fits your people.</p>
-<h2><a href="exploratory.html">Exploratory</a></h2>
-<p>Experiments I'm running, things I am learning and notes in progress.</p>
-<h2><a href="play.html">Play</a></h2>
-<p>Hobbies and things I have made for no good reason.</p>
-</div></main>
-<footer><div class="wrap">&copy; <span id="yr">2026</span> Mike Bauknecht &middot; ridingmyzephyr.com</div></footer>
-<script>document.getElementById("yr").textContent=new Date().getFullYear()</script>
-</body></html>
+    <header class="site">
+        <div class="wrap">
+            <a class="brand" href="#top">Mike Bauknecht<span>Software Consulting</span></a>
+            <nav aria-label="Main">
+                <a href="#services">Services</a>
+                <a href="#experience">Experience</a>
+                <a class="btn btn-sm" href="#contact">Get in touch</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="wrap">
+                <p class="eyebrow">Watertown, WI &middot; Serving Madison, Milwaukee and everything in between</p>
+                <h1>Technology that fits your people.</h1>
+                <p class="lede">Software consulting blends two of my favorite things: technology, and working with people to solve their problems. I use AI to work efficiently. It's still up to you and me to figure out the right thing to build.</p>
+                <p class="cta">
+                    <a class="btn" href="mailto:mike@bauknecht.ing?subject=Tech%20Fit%20Review">Book a Tech Fit Review</a>
+                    <a class="btn btn-ghost" href="#services">See services</a>
+                </p>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="wrap">
+                <h2>Services</h2>
+                <div class="grid">
+                    <article class="card featured">
+                        <p class="tag">For small businesses</p>
+                        <h3>Tech Fit Review</h3>
+                        <p class="price">$1,500 <span>flat &middot; half day</span></p>
+                        <p>We make sure the tools you already have are being used to their fullest, and you get a written plan your team can actually run.</p>
+                    </article>
+                    <article class="card">
+                        <p class="tag">Custom projects</p>
+                        <h3>Software development</h3>
+                        <p>With over two decades of experience I have a lot to lean on and AI has only made me more efficient.</p>
+                        <ul class="skills">
+                            <li>Custom Apps - small applications with big impact</li>
+                            <li>Integrations - design/implement data flows between systems</li>
+                            <li>Migrations - important legacy applications made available in new ways</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="wrap">
+                <h2>Experience</h2>
+                <ol class="timeline">
+                    <li>
+                        <time>2021 – now</time>
+                        <div>
+                            <h3>Software Consultant <span>Independent</span></h3>
+                            <p>Finding interesting projects and clients to work with. Focusing on: custom design/development - small apps with big impact, integrations - flowing data between systems, migrations - important legacy apps made available in new ways.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <time>2013 – 2021</time>
+                        <div>
+                            <h3>Software Engineer / Manager <span>Trek Bicycle</span></h3>
+                            <p>A dream job. I was thrown into new territory with new problems to solve on a global scale, and led a growing engineering team for a few years: new perspectives, great memories and some global travel.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <time>2005 – 2013</time>
+                        <div>
+                            <h3>Software Engineer <span>API Healthcare</span></h3>
+                            <p>As a junior developer I was thrown into great projects alongside senior developers who helped me grow. I didn't shy away from the frustrating work; it was more like a mystery to be solved, and I solved a lot of them.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="wrap">
+                <h2>Let's talk about your project</h2>
+                <p>Tell me a little about your business and what's getting in the way.</p>
+                <p class="cta">
+                    <a class="btn" href="mailto:mike@bauknecht.ing">mike@bauknecht.ing</a>
+                    <a class="btn btn-ghost" href="https://www.linkedin.com/in/michaelbauknecht/">LinkedIn</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">&copy; <span id="yr">2026</span> Mike Bauknecht &middot; bauknecht.ing</div>
+    </footer>
+
+    <script>document.getElementById("yr").textContent=new Date().getFullYear()</script>
+</body>
+</html>
