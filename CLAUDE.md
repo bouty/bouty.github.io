@@ -9,6 +9,7 @@ Single-page site for Mike Bauknecht's software consulting, served at bauknecht.i
 ## Structure
 
 - One page: `index.html`. It's hand-formatted with 4-space indentation and one block element per line, so the nesting is visible. Keep it that way (short inline elements like `<span>` stay on their parent's line). Sections (`#services`, `#experience`, `#contact`) are linked from the header nav as in-page anchors.
+- `notes/` is git-ignored and holds working notes that stay local, such as `notes/experience-interview.md`, the open questions and verification checklist for the Experience section. Check it when resuming that work.
 - `style.css` is the only stylesheet. It's written in a compact, minified style with one rule per line. Match that style.
 
 ## Conventions
